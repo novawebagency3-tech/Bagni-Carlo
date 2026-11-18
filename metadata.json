@@ -1,0 +1,6 @@
+{
+  "name": "Bagni Carlo Fano – #NONSOLOMARE",
+  "description": "Stabilimento balneare, 2 piscine, campi da beach volley e tennis, biciclette elettriche gratuite e Bagni Carlo Café a Fano (PU).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

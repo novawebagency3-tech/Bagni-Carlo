@@ -1,0 +1,2405 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; frame-src https://www.google.com; font-src 'self' data:; base-uri 'self'; form-action 'self' https://wa.me;" />
+  <title>Bagni Carlo – #NONSOLOMARE nel cuore di Fano (PU)</title>
+  <meta name="description" content="Stabilimento balneare Bagni Carlo a Fano (Viale Adriatico, 84): 2 piscine, vasca idromassaggio, 3 campi da beach volley/tennis illuminati, e-bike gratuite, 300 libri in spiaggia e Bagni Carlo Café." />
+  <meta property="og:title" content="Bagni Carlo – #NONSOLOMARE nel cuore di Fano" />
+  <meta property="og:description" content="2 piscine, vasca idromassaggio, 3 campi da beach volley/tennis illuminati, biciclette elettriche gratuite, 300 libri in spiaggia e aperitivi al Bagni Carlo Café." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0A365C" />
+  <style>
+    :root {
+      --bg-sand: #FAF8F5;
+      --bg-pool: #EEF7FB;
+      --bg-night: #0B192C;
+      --bg-night-elevated: #122640;
+      --surface-white: #FFFFFF;
+      --brand-adriatic: #0A365C;
+      --brand-adriatic-dark: #072845;
+      --brand-pool: #0284C7;
+      --brand-pool-hover: #0369A1;
+      --accent-sun: #EA580C;
+      --accent-sun-hover: #C2410C;
+      --accent-sun-soft: #FFF4ED;
+      --text-main: #0F2337;
+      --text-muted: #4B5E71;
+      --text-on-dark: #F1F5F9;
+      --text-on-dark-muted: #B6C7D9;
+      --border-hairline: rgba(10, 54, 92, 0.12);
+      --border-dark: rgba(255, 255, 255, 0.14);
+      --radius-lg: 16px;
+      --radius-md: 12px;
+      --radius-sm: 8px;
+      --shadow-card: 0 8px 28px -8px rgba(10, 54, 92, 0.10);
+      --shadow-focus: 0 0 0 3px rgba(2, 132, 199, 0.35);
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --container: 1200px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-sand);
+      color: var(--text-main);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+      color: inherit;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--brand-pool);
+      outline-offset: 2px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container);
+      margin-inline: auto;
+      padding-inline: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        padding-inline: 32px;
+      }
+    }
+
+    .tabular {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Header - 3-zone contract */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background-color: rgba(250, 248, 245, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      height: 64px;
+    }
+
+    .brand-wordmark {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--brand-adriatic);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+      padding-block: 4px;
+      border-bottom: 2px solid transparent;
+      transition: color 180ms var(--ease-out), border-color 180ms var(--ease-out);
+    }
+
+    .nav-links a:hover {
+      color: var(--brand-adriatic);
+      border-bottom-color: var(--accent-sun);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 10px 20px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.9375rem;
+      line-height: 1.2;
+      white-space: nowrap;
+      flex-shrink: 0;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: background-color 180ms var(--ease-out), color 180ms var(--ease-out), border-color 180ms var(--ease-out), transform 180ms var(--ease-out);
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+    }
+
+    .btn-primary {
+      background-color: var(--accent-sun);
+      color: #FFFFFF;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-sun-hover);
+    }
+
+    .btn-secondary {
+      background-color: var(--brand-adriatic);
+      color: #FFFFFF;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--brand-adriatic-dark);
+    }
+
+    .btn-outline {
+      background-color: var(--surface-white);
+      color: var(--brand-adriatic);
+      border-color: rgba(10, 54, 92, 0.22);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--brand-adriatic);
+      background-color: var(--bg-pool);
+    }
+
+    .btn-whatsapp {
+      background-color: #15803D;
+      color: #FFFFFF;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #166534;
+    }
+
+    .btn-sm {
+      min-height: 40px;
+      padding: 8px 16px;
+      font-size: 0.875rem;
+    }
+
+    .mobile-menu-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-hairline);
+      background: var(--surface-white);
+      color: var(--brand-adriatic);
+      cursor: pointer;
+    }
+
+    .mobile-drawer {
+      display: none;
+      border-top: 1px solid var(--border-hairline);
+      background-color: var(--bg-sand);
+      padding: 16px 20px 20px;
+    }
+
+    .mobile-drawer.is-open {
+      display: block;
+    }
+
+    .mobile-drawer nav {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .mobile-drawer a {
+      display: flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      color: var(--brand-adriatic);
+    }
+
+    .mobile-drawer a:hover {
+      background-color: var(--bg-pool);
+    }
+
+    @media (min-width: 900px) {
+      .nav-links { display: flex; }
+      .mobile-menu-btn { display: none; }
+      .mobile-drawer { display: none !important; }
+    }
+
+    /* Hero Section */
+    .hero {
+      padding-block: 36px 56px;
+      background: linear-gradient(180deg, var(--bg-sand) 0%, #F2F7FA 100%);
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    @media (min-width: 960px) {
+      .hero {
+        padding-block: 52px 72px;
+      }
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    @media (min-width: 960px) {
+      .hero-grid {
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 44px;
+      }
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-kicker {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--brand-pool-hover);
+      margin: 0 0 14px;
+    }
+
+    .hero-title {
+      font-size: clamp(2.125rem, 4.2vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: var(--brand-adriatic);
+      margin: 0 0 18px;
+      text-wrap: balance;
+    }
+
+    .hero-title .hashtag {
+      color: var(--accent-sun);
+    }
+
+    .hero-subtitle {
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      color: var(--text-muted);
+      margin: 0 0 28px;
+      max-width: 60ch;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .hero-media {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      min-height: 290px;
+      background-color: var(--brand-adriatic);
+      border: 1px solid var(--border-hairline);
+      box-shadow: var(--shadow-card);
+    }
+
+    @media (min-width: 960px) {
+      .hero-media {
+        min-height: 440px;
+        height: 100%;
+      }
+    }
+
+    .media-frame {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .media-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 420ms var(--ease-out), opacity 240ms var(--ease-out);
+    }
+
+    .media-fallback {
+      position: absolute;
+      inset: 0;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      background: linear-gradient(135deg, #0A365C 0%, #0284C7 65%, #38BDF8 100%);
+      color: #FFFFFF;
+      gap: 10px;
+    }
+
+    .media-frame.is-fallback img {
+      display: none;
+    }
+
+    .media-frame.is-fallback .media-fallback {
+      display: flex;
+    }
+
+    .media-fallback svg {
+      width: 44px;
+      height: 44px;
+      opacity: 0.9;
+    }
+
+    .media-fallback strong {
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .media-fallback span {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.86);
+      max-width: 32ch;
+    }
+
+    .hero-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 40px 20px 18px;
+      background: linear-gradient(180deg, rgba(11, 25, 44, 0) 0%, rgba(11, 25, 44, 0.82) 100%);
+      color: #FFFFFF;
+      font-size: 0.875rem;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 12px;
+      pointer-events: none;
+    }
+
+    /* Quick Info Strip below Hero */
+    .quick-strip {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-hairline);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .quick-strip {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+      }
+    }
+
+    .strip-item strong {
+      display: block;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--brand-adriatic);
+      letter-spacing: -0.02em;
+    }
+
+    .strip-item span {
+      display: block;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Sections */
+    .section {
+      padding-block: 64px;
+    }
+
+    @media (min-width: 960px) {
+      .section {
+        padding-block: 84px;
+      }
+    }
+
+    .section-sand {
+      background-color: var(--bg-sand);
+    }
+
+    .section-pool {
+      background-color: var(--bg-pool);
+      border-top: 1px solid var(--border-hairline);
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .section-night {
+      background-color: var(--bg-night);
+      color: var(--text-on-dark);
+    }
+
+    .section-head {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 36px;
+      max-width: 68ch;
+    }
+
+    .section-kicker {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--brand-pool-hover);
+      margin: 0;
+    }
+
+    .section-night .section-kicker {
+      color: #7DD3FC;
+    }
+
+    .section-title {
+      font-size: clamp(1.625rem, 3vw, 2.375rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      color: var(--brand-adriatic);
+      margin: 0;
+      text-wrap: balance;
+    }
+
+    .section-night .section-title {
+      color: #FFFFFF;
+    }
+
+    .section-desc {
+      margin: 0;
+      font-size: 1.03125rem;
+      color: var(--text-muted);
+    }
+
+    .section-night .section-desc {
+      color: var(--text-on-dark-muted);
+    }
+
+    /* Gallery 4-card Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 640px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1040px) {
+      .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .gallery-card {
+      background-color: var(--surface-white);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 200ms var(--ease-out), box-shadow 200ms var(--ease-out);
+      cursor: pointer;
+      text-align: left;
+      padding: 0;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-card);
+    }
+
+    .gallery-card:hover .gallery-thumb img {
+      transform: scale(1.04);
+    }
+
+    .gallery-thumb {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      position: relative;
+      background-color: var(--brand-adriatic);
+    }
+
+    .gallery-body {
+      padding: 18px 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .gallery-meta {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--brand-pool-hover);
+    }
+
+    .gallery-title {
+      margin: 0;
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: var(--brand-adriatic);
+      line-height: 1.3;
+    }
+
+    .gallery-text {
+      margin: 0;
+      font-size: 0.90625rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Services Section + Filter Tabs */
+    .filter-bar {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 5px;
+      background-color: rgba(255, 255, 255, 0.85);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-md);
+      margin-bottom: 28px;
+    }
+
+    .filter-tab {
+      min-height: 38px;
+      padding: 6px 14px;
+      border: 0;
+      border-radius: var(--radius-sm);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background-color 160ms var(--ease-out), color 160ms var(--ease-out);
+    }
+
+    .filter-tab:hover {
+      color: var(--brand-adriatic);
+    }
+
+    .filter-tab.is-active {
+      background-color: var(--brand-adriatic);
+      color: #FFFFFF;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 720px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1080px) {
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .service-card {
+      background-color: var(--surface-white);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .service-card.is-hidden {
+      display: none;
+    }
+
+    .service-card-top {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .service-icon-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .service-emoji {
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+
+    .service-cat {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--brand-pool-hover);
+    }
+
+    .service-title {
+      margin: 0;
+      font-size: 1.1875rem;
+      font-weight: 700;
+      color: var(--brand-adriatic);
+      line-height: 1.25;
+    }
+
+    .service-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--text-muted);
+      font-size: 0.9375rem;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .service-action {
+      padding-top: 14px;
+      border-top: 1px solid var(--border-hairline);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .service-action-link {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--accent-sun);
+      background: none;
+      border: 0;
+      padding: 6px 0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .service-action-link:hover {
+      color: var(--accent-sun-hover);
+      text-decoration: underline;
+    }
+
+    /* Night Section: Bagni Carlo Café & Eventi */
+    .night-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    @media (min-width: 960px) {
+      .night-layout {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 48px;
+      }
+    }
+
+    .night-features {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    @media (min-width: 600px) {
+      .night-features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .night-item {
+      background-color: var(--bg-night-elevated);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-md);
+      padding: 18px;
+    }
+
+    .night-item h3 {
+      margin: 0 0 6px;
+      font-size: 1.03125rem;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    .night-item p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--text-on-dark-muted);
+      line-height: 1.5;
+    }
+
+    .night-card {
+      background-color: var(--bg-night-elevated);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .night-card-meta {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: #FDBA74;
+    }
+
+    .night-card h3 {
+      margin: 0;
+      font-size: 1.375rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.25;
+    }
+
+    .night-card p {
+      margin: 0;
+      color: var(--text-on-dark-muted);
+      font-size: 0.95rem;
+    }
+
+    .night-schedule {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-dark);
+      font-size: 0.9rem;
+    }
+
+    .night-schedule-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: #E2E8F0;
+    }
+
+    .night-schedule-row span:last-child {
+      color: #7DD3FC;
+      font-weight: 600;
+    }
+
+    /* Booking Configurator (#prenota) */
+    .booking-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    @media (min-width: 960px) {
+      .booking-wrapper {
+        grid-template-columns: 1.25fr 0.75fr;
+        gap: 36px;
+      }
+    }
+
+    .booking-form-card {
+      background-color: var(--surface-white);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-card);
+    }
+
+    @media (min-width: 640px) {
+      .booking-form-card {
+        padding: 32px;
+      }
+    }
+
+    .step-block {
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .step-block:last-of-type {
+      border-bottom: 0;
+      margin-bottom: 16px;
+      padding-bottom: 0;
+    }
+
+    .step-heading {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin: 0 0 14px;
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: var(--brand-adriatic);
+    }
+
+    .step-num {
+      font-size: 0.875rem;
+      font-weight: 800;
+      color: var(--accent-sun);
+    }
+
+    .choice-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    @media (min-width: 560px) {
+      .choice-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .choice-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 12px 14px;
+      border: 1.5px solid var(--border-hairline);
+      border-radius: var(--radius-md);
+      background-color: var(--bg-sand);
+      cursor: pointer;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      color: var(--brand-adriatic);
+      transition: border-color 160ms var(--ease-out), background-color 160ms var(--ease-out);
+    }
+
+    .choice-option:hover {
+      border-color: var(--brand-pool);
+      background-color: var(--bg-pool);
+    }
+
+    .choice-option.is-selected {
+      border-color: var(--accent-sun);
+      background-color: var(--accent-sun-soft);
+      color: var(--brand-adriatic-dark);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 600px) {
+      .form-row-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .form-row-3 {
+        grid-template-columns: 1.1fr 0.9fr 1.2fr;
+      }
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .field label {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--brand-adriatic);
+    }
+
+    .input-control {
+      width: 100%;
+      min-height: 44px;
+      padding: 10px 12px;
+      border: 1.5px solid rgba(10, 54, 92, 0.2);
+      border-radius: var(--radius-sm);
+      background-color: #FFFFFF;
+      color: var(--text-main);
+      font-size: 0.95rem;
+      transition: border-color 160ms var(--ease-out), box-shadow 160ms var(--ease-out);
+    }
+
+    .input-control:focus {
+      outline: none;
+      border-color: var(--brand-pool);
+      box-shadow: var(--shadow-focus);
+    }
+
+    .input-control.has-error {
+      border-color: #DC2626;
+    }
+
+    textarea.input-control {
+      min-height: 82px;
+      resize: vertical;
+    }
+
+    .guests-group {
+      display: flex;
+      gap: 6px;
+    }
+
+    .guest-btn {
+      flex: 1;
+      min-height: 44px;
+      border: 1.5px solid rgba(10, 54, 92, 0.2);
+      border-radius: var(--radius-sm);
+      background-color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--brand-adriatic);
+      cursor: pointer;
+      transition: background-color 150ms var(--ease-out), border-color 150ms var(--ease-out), color 150ms var(--ease-out);
+    }
+
+    .guest-btn:hover {
+      border-color: var(--brand-pool);
+    }
+
+    .guest-btn.is-selected {
+      background-color: var(--brand-adriatic);
+      border-color: var(--brand-adriatic);
+      color: #FFFFFF;
+    }
+
+    .privacy-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 16px;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    .privacy-check input {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      accent-color: var(--brand-adriatic);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    .privacy-check a {
+      color: var(--brand-pool-hover);
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    .form-error {
+      margin-top: 12px;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      background-color: #FEF2F2;
+      border: 1px solid #FECACA;
+      color: #991B1B;
+      font-size: 0.875rem;
+      font-weight: 600;
+      display: none;
+    }
+
+    .form-error.is-visible {
+      display: block;
+    }
+
+    .form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .booking-summary-card {
+      background-color: var(--bg-pool);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .booking-summary-card h3 {
+      margin: 0;
+      font-size: 1.125rem;
+      font-weight: 800;
+      color: var(--brand-adriatic);
+    }
+
+    .summary-preview {
+      background-color: var(--surface-white);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      font-size: 0.9rem;
+      color: var(--text-main);
+      white-space: pre-line;
+      line-height: 1.55;
+    }
+
+    .summary-feedback {
+      display: none;
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      background-color: #ECFDF5;
+      border: 1px solid #A7F3D0;
+      color: #065F46;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    .summary-feedback.is-visible {
+      display: block;
+    }
+
+    .summary-meta-note {
+      margin: 0;
+      font-size: 0.84375rem;
+      color: var(--text-muted);
+    }
+
+    /* Location, Contacts & GDPR */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    @media (min-width: 960px) {
+      .contact-grid {
+        grid-template-columns: 0.95fr 1.05fr;
+        gap: 36px;
+      }
+    }
+
+    .contact-panel {
+      background-color: var(--surface-white);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .contact-row:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .contact-label {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: var(--brand-pool-hover);
+    }
+
+    .contact-value {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--brand-adriatic);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+    }
+
+    .contact-value a:hover {
+      color: var(--accent-sun);
+      text-decoration: underline;
+    }
+
+    .map-consent-box {
+      background-color: var(--surface-white);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .map-placeholder {
+      flex: 1;
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 14px;
+      background: linear-gradient(160deg, #EEF7FB 0%, #FAF8F5 100%);
+    }
+
+    .map-placeholder h3 {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--brand-adriatic);
+    }
+
+    .map-placeholder p {
+      margin: 0;
+      max-width: 44ch;
+      font-size: 0.9375rem;
+      color: var(--text-muted);
+    }
+
+    .map-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .map-iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      border: 0;
+      display: block;
+    }
+
+    .map-bar {
+      padding: 12px 18px;
+      background-color: var(--bg-sand);
+      border-top: 1px solid var(--border-hairline);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    /* Privacy GDPR Panel */
+    .gdpr-box {
+      margin-top: 32px;
+      background-color: var(--surface-white);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-lg);
+      padding: 24px 28px;
+    }
+
+    .gdpr-box h3 {
+      margin: 0 0 10px;
+      font-size: 1.0625rem;
+      font-weight: 800;
+      color: var(--brand-adriatic);
+    }
+
+    .gdpr-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    @media (min-width: 768px) {
+      .gdpr-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+    }
+
+    .gdpr-grid p {
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    .gdpr-grid strong {
+      display: block;
+      color: var(--brand-adriatic);
+      margin-bottom: 4px;
+    }
+
+    /* Lightbox Dialog */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background-color: rgba(11, 25, 44, 0.9);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .lightbox.is-open {
+      display: flex;
+    }
+
+    .lightbox-dialog {
+      position: relative;
+      width: 100%;
+      max-width: 880px;
+      background-color: var(--surface-white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+    }
+
+    .lightbox-media {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      background-color: var(--brand-adriatic);
+    }
+
+    .lightbox-footer {
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .lightbox-text h3 {
+      margin: 0 0 4px;
+      font-size: 1.125rem;
+      color: var(--brand-adriatic);
+    }
+
+    .lightbox-text p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .lightbox-controls {
+      display: flex;
+      gap: 8px;
+    }
+
+    /* Footer */
+    .site-footer {
+      background-color: var(--brand-adriatic);
+      color: #E2E8F0;
+      padding-block: 36px;
+      font-size: 0.875rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .footer-links a:hover {
+      color: #FFFFFF;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header: 3-Zone Contract -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand-wordmark">Bagni Carlo</a>
+
+      <nav class="nav-links" aria-label="Navigazione principale">
+        <a href="#galleria">Lo Stabilimento</a>
+        <a href="#servizi">Piscine &amp; Servizi</a>
+        <a href="#cafe">Café &amp; Eventi</a>
+        <a href="#prenota">Prenota</a>
+        <a href="#contatti">Dove Siamo</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#prenota" class="btn btn-primary btn-sm">Prenota Ora</a>
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-expanded="false" aria-controls="mobileDrawer" aria-label="Apri menu di navigazione">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-drawer" id="mobileDrawer">
+      <nav aria-label="Menu mobile">
+        <a href="#galleria">Lo Stabilimento</a>
+        <a href="#servizi">Piscine &amp; Servizi</a>
+        <a href="#cafe">Café &amp; Eventi</a>
+        <a href="#prenota">Prenota su WhatsApp</a>
+        <a href="#contatti">Dove Siamo &amp; Contatti</a>
+        <a href="#privacy">Informativa Privacy GDPR</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- 1. Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <p class="hero-kicker tabular">FANO (PU) · VIALE ADRIATICO, 84 · APERTI TUTTI I GIORNI 07:00 – 19:00</p>
+            <h1 class="hero-title">Bagni Carlo – <span class="hashtag">#NONSOLOMARE</span> nel cuore di Fano.</h1>
+            <p class="hero-subtitle">
+              2 piscine, vasca idromassaggio, 3 campi da beach volley/tennis illuminati, biciclette elettriche gratuite, 300 libri in spiaggia e aperitivi al Bagni Carlo Café.
+            </p>
+            <div class="hero-ctas">
+              <a href="#prenota" class="btn btn-primary">Prenota Ombrellone o Campo</a>
+              <a href="#servizi" class="btn btn-outline">Scopri Piscine &amp; Servizi</a>
+              <a href="https://wa.me/393338436071?text=Ciao%20Bagni%20Carlo%2C%20vorrei%20informazioni%20per%20una%20prenotazione." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                WhatsApp Diretto (333 843 6071)
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-media">
+            <div class="media-frame" data-fallback-title="Bagni Carlo Fano – Vista Panoramica">
+              <img
+                src="img/panoramica.jpg?v=1"
+                alt="Vista panoramica Bagni Carlo Fano con piscine, campi sportivi e spiaggia"
+                referrerpolicy="no-referrer"
+                loading="eager"
+              />
+              <div class="media-fallback" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 16c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0 2 .5 2 .5"></path>
+                  <path d="M2 20c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0 2 .5 2 .5"></path>
+                  <circle cx="12" cy="8" r="3.5"></circle>
+                  <path d="M12 2v1.5M5.5 5.5l1 1M18.5 5.5l-1 1"></path>
+                </svg>
+                <strong>Bagni Carlo · Villaggio Mare</strong>
+                <span>Spiaggia attrezzata, 2 piscine, idromassaggio e campi illuminati su Viale Adriatico, 84.</span>
+              </div>
+              <div class="hero-caption">
+                <span>Viale Adriatico, 84 · Fano</span>
+                <span class="tabular">07:00 – 19:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="quick-strip tabular" aria-label="In evidenza ai Bagni Carlo">
+          <div class="strip-item">
+            <strong>2 Piscine + Idro</strong>
+            <span>Area adulti, bimbi e acqua-fitness</span>
+          </div>
+          <div class="strip-item">
+            <strong>3 Campi Illuminati</strong>
+            <span>Beach volley, beach tennis e calcio-tennis</span>
+          </div>
+          <div class="strip-item">
+            <strong>E-Bike &amp; 300 Libri</strong>
+            <span>Inclusi gratis con l'ingresso spiaggia</span>
+          </div>
+          <div class="strip-item">
+            <strong>Accesso Completo</strong>
+            <span>Parcheggio e percorsi per carrozzine</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Galleria Fotografica Reale -->
+    <section id="galleria" class="section section-sand">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">LO STABILIMENTO IN FOTO</p>
+          <h2 class="section-title">Quattro sguardi reali su Bagni Carlo</h2>
+          <p class="section-desc">Dalle piscine riservate ai tramonti sui ciottoli dell'Adriatico: clicca su qualsiasi immagine per aprirla a tutto schermo.</p>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+          <button type="button" class="gallery-card" data-gallery-index="0">
+            <div class="gallery-thumb">
+              <div class="media-frame">
+                <img src="img/panoramica.jpg?v=1" alt="Vista Panoramica e Villaggio Mare Bagni Carlo Fano" referrerpolicy="no-referrer" loading="lazy" />
+                <div class="media-fallback" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 17c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0"/><circle cx="12" cy="8" r="3"/></svg>
+                  <strong>Vista Panoramica</strong>
+                  <span>img/panoramica.jpg</span>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-body">
+              <span class="gallery-meta">01 · Villaggio Mare</span>
+              <h3 class="gallery-title">Vista Panoramica &amp; Villaggio Mare</h3>
+              <p class="gallery-text">Nel cuore di Fano, tra spiagge attrezzate, aree verdi e tensostruttura eventi.</p>
+            </div>
+          </button>
+
+          <button type="button" class="gallery-card" data-gallery-index="1">
+            <div class="gallery-thumb">
+              <div class="media-frame">
+                <img src="img/piscina.jpg?v=1" alt="Le due piscine e vasca idromassaggio Bagni Carlo Fano" referrerpolicy="no-referrer" loading="lazy" />
+                <div class="media-fallback" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 15c2-1 4-1 6 0s4 1 6 0 4-1 6 0"/><path d="M2 19c2-1 4-1 6 0s4 1 6 0 4-1 6 0"/><path d="M7 11V6a2 2 0 0 1 4 0v5M14 11V6a2 2 0 0 1 4 0v5"/></svg>
+                  <strong>Piscine &amp; Idromassaggio</strong>
+                  <span>img/piscina.jpg</span>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-body">
+              <span class="gallery-meta">02 · Piscine &amp; Fitness</span>
+              <h3 class="gallery-title">Le Nostre Piscine &amp; Relax</h3>
+              <p class="gallery-text">2 piscine riservate (adulti e bambini) più vasca idromassaggio e corsi di acqua-fitness.</p>
+            </div>
+          </button>
+
+          <button type="button" class="gallery-card" data-gallery-index="2">
+            <div class="gallery-thumb">
+              <div class="media-frame">
+                <img src="img/tramonto.jpg?v=1" alt="Spiaggia attrezzata al tramonto ai Bagni Carlo Fano" referrerpolicy="no-referrer" loading="lazy" />
+                <div class="media-fallback" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 10V3M4.9 10.9l1.4 1.4M19.1 10.9l-1.4 1.4M2 16h20"/><path d="M7 16a5 5 0 0 1 10 0"/></svg>
+                  <strong>Spiaggia &amp; Tramonti</strong>
+                  <span>img/tramonto.jpg</span>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-body">
+              <span class="gallery-meta">03 · Spiaggia Attrezzata</span>
+              <h3 class="gallery-title">Spiaggia Attrezzata &amp; Tramonti</h3>
+              <p class="gallery-text">Ombrelloni e lettini distanziati in riva al mare per giornate di puro relax.</p>
+            </div>
+          </button>
+
+          <button type="button" class="gallery-card" data-gallery-index="3">
+            <div class="gallery-thumb">
+              <div class="media-frame">
+                <img src="img/fulmine.jpg?v=1" alt="L'energia del mare Adriatico sulla spiaggia di ciottoli dei Bagni Carlo" referrerpolicy="no-referrer" loading="lazy" />
+                <div class="media-fallback" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+                  <strong>Energia dell'Adriatico</strong>
+                  <span>img/fulmine.jpg</span>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-body">
+              <span class="gallery-meta">04 · Costa Adriatica</span>
+              <h3 class="gallery-title">L'Energia dell'Adriatico</h3>
+              <p class="gallery-text">Scatti autentici dalla spiaggia di ciottoli e dalle scogliere dei Bagni Carlo.</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Tutti i Servizi Esclusivi & Accessibilità -->
+    <section id="servizi" class="section section-pool">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">SERVIZI ESCLUSIVI &amp; ACCESSIBILITÀ</p>
+          <h2 class="section-title">Tutto quello che rende unica la tua giornata al mare</h2>
+          <p class="section-desc">Piscine, impianti sportivi illuminati di sera, servizi gratuiti inclusi e attenzione reale all'accessibilità.</p>
+        </div>
+
+        <div class="filter-bar" role="tablist" aria-label="Filtra i servizi Bagni Carlo">
+          <button type="button" class="filter-tab is-active" data-filter="all" role="tab" aria-selected="true">Tutti i Servizi</button>
+          <button type="button" class="filter-tab" data-filter="piscine" role="tab" aria-selected="false">Piscine &amp; Relax</button>
+          <button type="button" class="filter-tab" data-filter="sport" role="tab" aria-selected="false">Impianti Sportivi</button>
+          <button type="button" class="filter-tab" data-filter="gratuiti" role="tab" aria-selected="false">Servizi Gratuiti</button>
+          <button type="button" class="filter-tab" data-filter="comfort" role="tab" aria-selected="false">Accessibilità &amp; Pagamenti</button>
+        </div>
+
+        <div class="services-grid" id="servicesGrid">
+          <article class="service-card" data-category="piscine">
+            <div class="service-card-top">
+              <div class="service-icon-row">
+                <span class="service-emoji" aria-hidden="true">🏊</span>
+                <span class="service-cat">Piscine &amp; Benessere</span>
+              </div>
+              <h3 class="service-title">2 Piscine &amp; Vasca Idromassaggio</h3>
+              <ul class="service-list">
+                <li>Piscina riservata per adulti con zona solarium attrezzata</li>
+                <li>Piscina dedicata ai bambini in acqua bassa</li>
+                <li>Vasca idromassaggio per momenti di relax</li>
+                <li>Corsi di acqua-fitness e zumba in piscina</li>
+              </ul>
+            </div>
+            <div class="service-action">
+              <button type="button" class="service-action-link" data-preset="🏊 Ingresso Piscine &amp; Relax" data-pref="Zona Piscina">
+                Prenota ingresso piscina &rarr;
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card" data-category="sport">
+            <div class="service-card-top">
+              <div class="service-icon-row">
+                <span class="service-emoji" aria-hidden="true">🏐</span>
+                <span class="service-cat">Sport Diurni &amp; Serali</span>
+              </div>
+              <h3 class="service-title">Impianti Sportivi Illuminati</h3>
+              <ul class="service-list">
+                <li>3 campi da beach volley e beach tennis con illuminazione notturna</li>
+                <li>Campo da calcio-tennis sulla sabbia</li>
+                <li>Tavoli da ping-pong per tornei e sfide tra amici</li>
+                <li>Campo da basket 2+2</li>
+              </ul>
+            </div>
+            <div class="service-action">
+              <button type="button" class="service-action-link" data-preset="🏐 Campo Beach Volley / Tennis" data-pref="Campo Serale">
+                Prenota un campo &rarr;
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card" data-category="gratuiti">
+            <div class="service-card-top">
+              <div class="service-icon-row">
+                <span class="service-emoji" aria-hidden="true">🚲</span>
+                <span class="service-cat">Inclusi per gli Ospiti</span>
+              </div>
+              <h3 class="service-title">Servizi Gratuiti Unici</h3>
+              <ul class="service-list">
+                <li>Biciclette elettriche ad uso gratuito per muoversi a Fano</li>
+                <li>Armadietti portaoggetti con prese di ricarica telefono</li>
+                <li>300 libri in spiaggia dalla Biblioteca Federiciana</li>
+                <li>Wi-Fi gratuito su tutto lo stabilimento e sabbiera bimbi</li>
+              </ul>
+            </div>
+            <div class="service-action">
+              <button type="button" class="service-action-link" data-preset="🏖️ Ombrellone + 2 Lettini" data-pref="Prima/Seconda fila">
+                Prenota il tuo ombrellone &rarr;
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card" data-category="piscine">
+            <div class="service-card-top">
+              <div class="service-icon-row">
+                <span class="service-emoji" aria-hidden="true">🍹</span>
+                <span class="service-cat">Dalla Colazione alla Sera</span>
+              </div>
+              <h3 class="service-title">Bagni Carlo Café &amp; Eventi Estivi</h3>
+              <ul class="service-list">
+                <li>Aperitivi vista mare sul tramonto adriatico</li>
+                <li>Cene in riva al mare sotto le stelle</li>
+                <li>Proiezioni cinema estivo <em>CineFortunae</em></li>
+                <li>Musica dal vivo e serate a tema nella tensostruttura</li>
+              </ul>
+            </div>
+            <div class="service-action">
+              <button type="button" class="service-action-link" data-preset="🍹 Tavolo Bagni Carlo Café / Aperitivo" data-pref="Aperitivo Tramonto">
+                Prenota un tavolo &rarr;
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card" data-category="comfort">
+            <div class="service-card-top">
+              <div class="service-icon-row">
+                <span class="service-emoji" aria-hidden="true">♿</span>
+                <span class="service-cat">Senza Barriere</span>
+              </div>
+              <h3 class="service-title">Accessibilità Totale</h3>
+              <ul class="service-list">
+                <li>Ingresso principale privo di barriere architettoniche</li>
+                <li>Parcheggio accessibile in sedia a rotelle a pochi passi</li>
+                <li>Percorsi comodi verso spiaggia, piscina e Café</li>
+                <li>Assistenza dedicata su richiesta in fase di prenotazione</li>
+              </ul>
+            </div>
+            <div class="service-action">
+              <button type="button" class="service-action-link" data-preset="🏖️ Ombrellone + 2 Lettini" data-pref="Prima/Seconda fila">
+                Richiedi posto accessibile &rarr;
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card" data-category="comfort">
+            <div class="service-card-top">
+              <div class="service-icon-row">
+                <span class="service-emoji" aria-hidden="true">💳</span>
+                <span class="service-cat">Zero Pensieri</span>
+              </div>
+              <h3 class="service-title">Pagamenti Comodi</h3>
+              <ul class="service-list">
+                <li>Accettiamo tutte le principali carte di credito</li>
+                <li>Pagamenti rapidi con carte di debito e Bancomat</li>
+                <li>Pagamenti mobile contactless via smartphone e smartwatch (NFC)</li>
+                <li>Ricarica comoda in cassa per spiaggia, piscine e Café</li>
+              </ul>
+            </div>
+            <div class="service-action">
+              <a href="#prenota" class="service-action-link">Configura richiesta &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Sezione Serale: Bagni Carlo Café & Eventi -->
+    <section id="cafe" class="section section-night">
+      <div class="container">
+        <div class="night-layout">
+          <div>
+            <div class="section-head" style="margin-bottom: 18px;">
+              <p class="section-kicker">BAGNI CARLO CAFÉ &amp; EVENTI</p>
+              <h2 class="section-title">Quando cala il sole, il mare cambia ritmo</h2>
+              <p class="section-desc">
+                Dal primo caffè del mattino alle 07:00 agli aperitivi vista mare, le cene in riva all'Adriatico, le serate musicali e il cinema sotto le stelle di <strong>CineFortunae</strong>.
+              </p>
+            </div>
+
+            <div class="night-features">
+              <div class="night-item">
+                <h3>🍹 Aperitivi Vista Mare</h3>
+                <p>Cocktail, calici selezionati e taglieri sul lungomare di Fano davanti al tramonto.</p>
+              </div>
+              <div class="night-item">
+                <h3>🍽️ Cene in Riva al Mare</h3>
+                <p>Tavoli vista spiaggia per serate estive tra amici, famiglia o dopo una partita a beach volley.</p>
+              </div>
+              <div class="night-item">
+                <h3>🎬 Cinema CineFortunae</h3>
+                <p>Proiezioni estive direttamente in spiaggia, con i piedi sulla sabbia e l'audio del mare.</p>
+              </div>
+              <div class="night-item">
+                <h3>🎶 Musica &amp; Serate a Tema</h3>
+                <p>Appuntamenti serali nella tensostruttura eventi con musica dal vivo e dj set estivi.</p>
+              </div>
+            </div>
+          </div>
+
+          <aside class="night-card" aria-label="Riepilogo Bagni Carlo Café">
+            <span class="night-card-meta">APERITIVO · CENA · CAMPI SERALI</span>
+            <h3>Prenota il tuo tavolo o campo serale su WhatsApp</h3>
+            <p>Vuoi un tavolo per l'aperitivo al tramonto o un campo illuminato per giocare con gli amici dopo cena? Invia la richiesta in 30 secondi.</p>
+            <div class="night-schedule tabular">
+              <div class="night-schedule-row">
+                <span>Stabilimento &amp; Piscine</span>
+                <span>07:00 – 19:00</span>
+              </div>
+              <div class="night-schedule-row">
+                <span>Aperitivi &amp; Bagni Carlo Café</span>
+                <span>Tramonto &amp; Sera</span>
+              </div>
+              <div class="night-schedule-row">
+                <span>Campi Beach Volley / Tennis</span>
+                <span>Illuminazione Serale</span>
+              </div>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:10px; padding-top:6px;">
+              <button type="button" class="btn btn-primary" data-preset="🍹 Tavolo Bagni Carlo Café / Aperitivo" data-pref="Aperitivo Tramonto">
+                Prenota Tavolo Café
+              </button>
+              <button type="button" class="btn btn-outline" data-preset="🏐 Campo Beach Volley / Tennis" data-pref="Campo Serale">
+                Prenota Campo Serale
+              </button>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Configuratore Prenotazione Rapida su WhatsApp -->
+    <section id="prenota" class="section section-sand">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">PRENOTAZIONE DIRETTA SENZA ATTESE</p>
+          <h2 class="section-title">Configura la tua richiesta e inviala su WhatsApp</h2>
+          <p class="section-desc">Scegli servizio, data e preferenze in 3 passaggi. Il messaggio viene preparato direttamente sul tuo dispositivo per il numero WhatsApp <strong>333 843 6071</strong>.</p>
+        </div>
+
+        <div class="booking-wrapper">
+          <form class="booking-form-card" id="bookingForm" novalidate>
+            <!-- Step 1 -->
+            <div class="step-block">
+              <h3 class="step-heading"><span class="step-num tabular">01.</span> Cosa vuoi prenotare</h3>
+              <div class="choice-grid" id="serviceChoices" role="radiogroup" aria-label="Tipo di prenotazione">
+                <button type="button" class="choice-option is-selected" data-service="🏖️ Ombrellone + 2 Lettini" data-default-pref="Prima/Seconda fila" aria-checked="true" role="radio">
+                  <span>🏖️ Ombrellone + 2 Lettini</span>
+                </button>
+                <button type="button" class="choice-option" data-service="🏊 Ingresso Piscine & Relax" data-default-pref="Zona Piscina" aria-checked="false" role="radio">
+                  <span>🏊 Ingresso Piscine &amp; Relax</span>
+                </button>
+                <button type="button" class="choice-option" data-service="🏐 Campo Beach Volley / Tennis" data-default-pref="Campo Serale" aria-checked="false" role="radio">
+                  <span>🏐 Campo Beach Volley / Tennis</span>
+                </button>
+                <button type="button" class="choice-option" data-service="🍹 Tavolo Bagni Carlo Café / Aperitivo" data-default-pref="Aperitivo Tramonto" aria-checked="false" role="radio">
+                  <span>🍹 Tavolo Bagni Carlo Café / Aperitivo</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-block">
+              <h3 class="step-heading"><span class="step-num tabular">02.</span> Data e Ospiti</h3>
+              <div class="form-row form-row-3">
+                <div class="field">
+                  <label for="bookingDate">Data richiesta</label>
+                  <input type="date" id="bookingDate" name="bookingDate" class="input-control tabular" required />
+                </div>
+
+                <div class="field">
+                  <label id="guestsLabel">Numero persone</label>
+                  <div class="guests-group" id="guestsGroup" role="radiogroup" aria-labelledby="guestsLabel">
+                    <button type="button" class="guest-btn tabular" data-guests="1" aria-checked="false" role="radio">1</button>
+                    <button type="button" class="guest-btn is-selected tabular" data-guests="2" aria-checked="true" role="radio">2</button>
+                    <button type="button" class="guest-btn tabular" data-guests="3" aria-checked="false" role="radio">3</button>
+                    <button type="button" class="guest-btn tabular" data-guests="4" aria-checked="false" role="radio">4</button>
+                    <button type="button" class="guest-btn tabular" data-guests="5+" aria-checked="false" role="radio">5+</button>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="bookingPref">Preferenza</label>
+                  <select id="bookingPref" name="bookingPref" class="input-control">
+                    <option value="Prima/Seconda fila">Prima/Seconda fila</option>
+                    <option value="Zona Piscina">Zona Piscina</option>
+                    <option value="Campo Serale">Campo Serale</option>
+                    <option value="Aperitivo Tramonto">Aperitivo Tramonto</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-block">
+              <h3 class="step-heading"><span class="step-num tabular">03.</span> Nome &amp; Invio Diretto</h3>
+              <div class="form-row form-row-2">
+                <div class="field">
+                  <label for="guestName">Il tuo Nome e Cognome *</label>
+                  <input type="text" id="guestName" name="guestName" class="input-control" placeholder="Es. Marco Rossi" autocomplete="name" required />
+                </div>
+                <div class="field">
+                  <label for="guestNotes">Note facoltative (orario, attrezzatura, accessibilità)</label>
+                  <input type="text" id="guestNotes" name="guestNotes" class="input-control" placeholder="Es. Ore 18:30, accesso carrozzina, e-bike" />
+                </div>
+              </div>
+
+              <label class="privacy-check">
+                <input type="checkbox" id="privacyConsent" required />
+                <span>
+                  Ho letto l'<a href="#privacy">Informativa Privacy GDPR</a> e acconsento all'uso locale dei dati inseriti per preparare il messaggio WhatsApp verso Bagni Carlo.
+                </span>
+              </label>
+
+              <div class="form-error" id="bookingError" role="alert" aria-live="polite"></div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-whatsapp" id="submitWhatsappBtn">
+                  📲 Invia Richiesta su WhatsApp (333 843 6071)
+                </button>
+                <a href="tel:+390721807384" class="btn btn-outline">
+                  Chiama 0721 807384
+                </a>
+              </div>
+            </div>
+          </form>
+
+          <!-- Live Message Preview -->
+          <aside class="booking-summary-card" aria-label="Anteprima messaggio WhatsApp">
+            <h3>Anteprima Messaggio WhatsApp</h3>
+            <div class="summary-preview" id="messagePreview"></div>
+            <div class="summary-feedback" id="bookingSuccess" role="status" aria-live="polite">
+              Richiesta pronta! Si è aperta la chat WhatsApp con il testo già compilato. Se il browser blocca l'apertura, usa il pulsante qui sotto.
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:10px;">
+              <a href="https://wa.me/393338436071" id="directWaFallback" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                Apri link WhatsApp
+              </a>
+              <button type="button" id="copyMsgBtn" class="btn btn-outline btn-sm">
+                Copia testo
+              </button>
+            </div>
+            <p class="summary-meta-note">
+              Nessun dato viene salvato su server esterni: il riepilogo viene generato istantaneamente nel tuo browser.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Dove Siamo, Contatti, Social & Privacy GDPR -->
+    <section id="contatti" class="section section-pool">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">DOVE SIAMO &amp; CONTATTI</p>
+          <h2 class="section-title">Ti aspettiamo in Viale Adriatico, 84 a Fano</h2>
+          <p class="section-desc">Aperti tutti i giorni dalle 07:00 alle 19:00, più Bagni Carlo Café, campi illuminati ed eventi serali.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-panel">
+            <div class="contact-row">
+              <span class="contact-label">Indirizzo Stabilimento</span>
+              <div class="contact-value">Viale Adriatico, 84 – 61032 Fano (PU)</div>
+            </div>
+
+            <div class="contact-row">
+              <span class="contact-label">Telefoni Fissi</span>
+              <div class="contact-value tabular">
+                <a href="tel:+390721807384">0721 807384</a>
+                <span>/</span>
+                <a href="tel:+390721805985">0721 805985</a>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <span class="contact-label">Cellulari &amp; WhatsApp</span>
+              <div class="contact-value tabular">
+                <a href="https://wa.me/393338436071" target="_blank" rel="noopener noreferrer">333 843 6071 (WhatsApp)</a>
+                <span>/</span>
+                <a href="tel:+393384080552">338 408 0552</a>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <span class="contact-label">Email</span>
+              <div class="contact-value">
+                <a href="mailto:bagnicarlo@bagnicarlo.com">bagnicarlo@bagnicarlo.com</a>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <span class="contact-label">Canali Social</span>
+              <div class="contact-value">
+                <a href="https://www.instagram.com/bagnicarlo/" target="_blank" rel="noopener noreferrer">Instagram @bagnicarlo</a>
+                <span>·</span>
+                <a href="https://www.facebook.com/search/top?q=Bagni%20Carlo%20Fano" target="_blank" rel="noopener noreferrer">Facebook Bagni Carlo</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-consent-box" id="mapBox">
+            <div class="map-placeholder" id="mapPlaceholder">
+              <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#0A365C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <h3>Mappa Google (Caricamento su Clic)</h3>
+              <p>Per tutelare la tua privacy, la mappa di Google non viene caricata automaticamente. Clicca per visualizzare Viale Adriatico, 84 – Fano (43.8456, 13.0218).</p>
+              <div class="map-actions">
+                <button type="button" class="btn btn-secondary" id="loadMapBtn">Carica Mappa Interattiva</button>
+                <a href="https://www.google.com/maps/search/?api=1&query=Viale+Adriatico+84+61032+Fano+PU" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                  Apri su Google Maps
+                </a>
+              </div>
+            </div>
+            <div class="map-bar">
+              <span>Coordinate: <strong class="tabular">43.8456° N, 13.0218° E</strong> · Viale Adriatico, 84, Fano</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=Viale+Adriatico+84+61032+Fano+PU" target="_blank" rel="noopener noreferrer" style="color:var(--brand-pool-hover); font-weight:700;">Indicazioni stradali &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Privacy GDPR -->
+        <div class="gdpr-box" id="privacy">
+          <h3>Informativa Privacy &amp; Cookie (Regolamento UE 2016/679 – GDPR)</h3>
+          <div class="gdpr-grid">
+            <p>
+              <strong>Zero Cookie di Profilazione</strong>
+              Questo sito non installa cookie di profilazione, analytics invasivi o traccianti pubblicitari di terze parti durante la navigazione.
+            </p>
+            <p>
+              <strong>Dati Usati Solo sul Dispositivo</strong>
+              Le informazioni inserite nel configuratore di prenotazione (nome, data, preferenze, note) restano sul tuo dispositivo e servono unicamente a comporre il messaggio WhatsApp che scegli volontariamente di inviare.
+            </p>
+            <p>
+              <strong>Mappa Esterna &amp; Titolare</strong>
+              L'embed di Google Maps si attiva esclusivamente dopo il tuo clic esplicito. Titolare del trattamento: Bagni Carlo, Viale Adriatico 84, 61032 Fano (PU) · Email: <a href="mailto:bagnicarlo@bagnicarlo.com" style="text-decoration:underline; color:var(--brand-pool-hover);">bagnicarlo@bagnicarlo.com</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Bagni Carlo · #NONSOLOMARE</strong> — Viale Adriatico, 84 · 61032 Fano (PU)
+      </div>
+      <div class="footer-links">
+        <a href="#servizi">Piscine &amp; Sport</a>
+        <a href="#cafe">Café &amp; Eventi</a>
+        <a href="#prenota">Prenota WhatsApp</a>
+        <a href="#privacy">Privacy GDPR</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" aria-hidden="true">
+    <div class="lightbox-dialog">
+      <div class="lightbox-media">
+        <div class="media-frame" id="lightboxFrame">
+          <img id="lightboxImg" src="" alt="" referrerpolicy="no-referrer" />
+          <div class="media-fallback" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 16c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0"/><circle cx="12" cy="8" r="3.5"/></svg>
+            <strong id="lightboxFallbackTitle">Bagni Carlo Fano</strong>
+            <span>Immagine dello stabilimento balneare su Viale Adriatico, 84.</span>
+          </div>
+        </div>
+      </div>
+      <div class="lightbox-footer">
+        <div class="lightbox-text">
+          <h3 id="lightboxTitle"></h3>
+          <p id="lightboxCaption"></p>
+        </div>
+        <div class="lightbox-controls">
+          <button type="button" class="btn btn-outline btn-sm" id="lbPrev" aria-label="Foto precedente">&larr; Prec</button>
+          <button type="button" class="btn btn-outline btn-sm" id="lbNext" aria-label="Foto successiva">Succ &rarr;</button>
+          <button type="button" class="btn btn-secondary btn-sm" id="lbClose">Chiudi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+
+      /* 1. Resilient Image Fallback Handler */
+      function attachFallback(img) {
+        if (!img) return;
+        var frame = img.closest('.media-frame');
+        if (!frame) return;
+        function markFallback() {
+          frame.classList.add('is-fallback');
+        }
+        function clearFallback() {
+          frame.classList.remove('is-fallback');
+        }
+        img.addEventListener('error', markFallback);
+        img.addEventListener('load', clearFallback);
+        if (img.complete && img.naturalWidth === 0 && img.getAttribute('src')) {
+          markFallback();
+        }
+      }
+
+      document.querySelectorAll('.media-frame img').forEach(attachFallback);
+
+      /* 2. Mobile Navigation Drawer */
+      var mobileBtn = document.getElementById('mobileMenuBtn');
+      var mobileDrawer = document.getElementById('mobileDrawer');
+      if (mobileBtn && mobileDrawer) {
+        mobileBtn.addEventListener('click', function () {
+          var isOpen = mobileDrawer.classList.toggle('is-open');
+          mobileBtn.setAttribute('aria-expanded', String(isOpen));
+        });
+        mobileDrawer.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            mobileDrawer.classList.remove('is-open');
+            mobileBtn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      /* 3. Services Category Filtering */
+      var filterTabs = document.querySelectorAll('#servizi .filter-tab');
+      var serviceCards = document.querySelectorAll('#servicesGrid .service-card');
+
+      filterTabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          var filter = tab.getAttribute('data-filter');
+          filterTabs.forEach(function (t) {
+            var active = t === tab;
+            t.classList.toggle('is-active', active);
+            t.setAttribute('aria-selected', String(active));
+          });
+          serviceCards.forEach(function (card) {
+            var cat = card.getAttribute('data-category');
+            var show = filter === 'all' || cat === filter;
+            card.classList.toggle('is-hidden', !show);
+          });
+        });
+      });
+
+      /* 4. Lightbox Gallery */
+      var galleryItems = [
+        {
+          src: 'img/panoramica.jpg?v=1',
+          alt: 'Vista panoramica Bagni Carlo Fano con piscine, campi sportivi e spiaggia',
+          title: 'Vista Panoramica & Villaggio Mare',
+          caption: 'Nel cuore di Fano, tra spiagge attrezzate, aree verdi e tensostruttura eventi.'
+        },
+        {
+          src: 'img/piscina.jpg?v=1',
+          alt: 'Le due piscine e vasca idromassaggio Bagni Carlo Fano',
+          title: 'Le Nostre Piscine & Relax',
+          caption: '2 piscine riservate (adulti e bambini) più vasca idromassaggio e corsi di acqua-fitness.'
+        },
+        {
+          src: 'img/tramonto.jpg?v=1',
+          alt: 'Spiaggia attrezzata al tramonto ai Bagni Carlo Fano',
+          title: 'Spiaggia Attrezzata & Tramonti',
+          caption: 'Ombrelloni e lettini distanziati in riva al mare per giornate di puro relax.'
+        },
+        {
+          src: 'img/fulmine.jpg?v=1',
+          alt: "L'energia del mare Adriatico sulla spiaggia di ciottoli dei Bagni Carlo",
+          title: "L'Energia dell'Adriatico",
+          caption: 'Scatti autentici dalla spiaggia di ciottoli e dalle scogliere dei Bagni Carlo.'
+        }
+      ];
+
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImg = document.getElementById('lightboxImg');
+      var lightboxFrame = document.getElementById('lightboxFrame');
+      var lightboxTitle = document.getElementById('lightboxTitle');
+      var lightboxFallbackTitle = document.getElementById('lightboxFallbackTitle');
+      var lightboxCaption = document.getElementById('lightboxCaption');
+      var lbPrev = document.getElementById('lbPrev');
+      var lbNext = document.getElementById('lbNext');
+      var lbClose = document.getElementById('lbClose');
+      var currentGalleryIndex = 0;
+
+      function renderLightbox(index) {
+        currentGalleryIndex = (index + galleryItems.length) % galleryItems.length;
+        var item = galleryItems[currentGalleryIndex];
+        var sameSrc = lightboxImg.getAttribute('src') === item.src;
+        lightboxFrame.classList.remove('is-fallback');
+        lightboxImg.src = item.src;
+        lightboxImg.alt = item.alt;
+        lightboxTitle.textContent = item.title;
+        lightboxFallbackTitle.textContent = item.title;
+        lightboxCaption.textContent = item.caption;
+        if (sameSrc && lightboxImg.complete && lightboxImg.naturalWidth === 0) {
+          lightboxFrame.classList.add('is-fallback');
+        }
+      }
+
+      function openLightbox(index) {
+        renderLightbox(index);
+        lightbox.classList.add('is-open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        lbClose.focus();
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('is-open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      document.querySelectorAll('[data-gallery-index]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var idx = parseInt(btn.getAttribute('data-gallery-index'), 10) || 0;
+          openLightbox(idx);
+        });
+      });
+
+      if (lbPrev) lbPrev.addEventListener('click', function () { renderLightbox(currentGalleryIndex - 1); });
+      if (lbNext) lbNext.addEventListener('click', function () { renderLightbox(currentGalleryIndex + 1); });
+      if (lbClose) lbClose.addEventListener('click', closeLightbox);
+      if (lightbox) {
+        lightbox.addEventListener('click', function (e) {
+          if (e.target === lightbox) closeLightbox();
+        });
+      }
+      document.addEventListener('keydown', function (e) {
+        if (!lightbox || !lightbox.classList.contains('is-open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') renderLightbox(currentGalleryIndex - 1);
+        if (e.key === 'ArrowRight') renderLightbox(currentGalleryIndex + 1);
+      });
+
+      /* 5. WhatsApp Booking Configurator */
+      var WA_NUMBER = '393338436071';
+      var serviceButtons = document.querySelectorAll('#serviceChoices .choice-option');
+      var guestButtons = document.querySelectorAll('#guestsGroup .guest-btn');
+      var dateInput = document.getElementById('bookingDate');
+      var prefSelect = document.getElementById('bookingPref');
+      var nameInput = document.getElementById('guestName');
+      var notesInput = document.getElementById('guestNotes');
+      var privacyCheck = document.getElementById('privacyConsent');
+      var previewEl = document.getElementById('messagePreview');
+      var errorEl = document.getElementById('bookingError');
+      var successEl = document.getElementById('bookingSuccess');
+      var directFallbackLink = document.getElementById('directWaFallback');
+      var copyBtn = document.getElementById('copyMsgBtn');
+      var bookingForm = document.getElementById('bookingForm');
+
+      var state = {
+        service: '🏖️ Ombrellone + 2 Lettini',
+        guests: '2'
+      };
+
+      // Default date = today
+      var today = new Date();
+      var yyyy = today.getFullYear();
+      var mm = String(today.getMonth() + 1).padStart(2, '0');
+      var dd = String(today.getDate()).padStart(2, '0');
+      var todayStr = yyyy + '-' + mm + '-' + dd;
+      if (dateInput) {
+        dateInput.min = todayStr;
+        dateInput.value = todayStr;
+      }
+
+      function formatItalianDate(isoDate) {
+        if (!isoDate) return 'Da concordare';
+        var parts = isoDate.split('-');
+        if (parts.length !== 3) return isoDate;
+        return parts[2] + '/' + parts[1] + '/' + parts[0];
+      }
+
+      function buildMessage() {
+        var nome = (nameInput && nameInput.value.trim()) ? nameInput.value.trim() : '[Il tuo Nome]';
+        var dataIt = formatItalianDate(dateInput ? dateInput.value : '');
+        var pref = prefSelect ? prefSelect.value : 'Prima/Seconda fila';
+        var notes = (notesInput && notesInput.value.trim()) ? notesInput.value.trim() : '';
+
+        var lines = [
+          'Ciao Bagni Carlo Fano! Vorrei richiedere una prenotazione:',
+          '• Servizio: ' + state.service,
+          '• Data: ' + dataIt,
+          '• Ospiti: ' + state.guests,
+          '• Preferenza: ' + pref,
+          '• Nome: ' + nome
+        ];
+        if (notes) {
+          lines.push('• Note: ' + notes);
+        }
+        return lines.join('\n');
+      }
+
+      function buildWhatsappUrl(messageText) {
+        return 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(messageText);
+      }
+
+      function updatePreview() {
+        var msg = buildMessage();
+        if (previewEl) previewEl.textContent = msg;
+        if (directFallbackLink) directFallbackLink.href = buildWhatsappUrl(msg);
+      }
+
+      function selectService(serviceLabel, defaultPref) {
+        state.service = serviceLabel;
+        serviceButtons.forEach(function (btn) {
+          var match = btn.getAttribute('data-service') === serviceLabel;
+          btn.classList.toggle('is-selected', match);
+          btn.setAttribute('aria-checked', String(match));
+        });
+        if (defaultPref && prefSelect) {
+          prefSelect.value = defaultPref;
+        }
+        updatePreview();
+      }
+
+      serviceButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          selectService(
+            btn.getAttribute('data-service'),
+            btn.getAttribute('data-default-pref')
+          );
+        });
+      });
+
+      guestButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          state.guests = btn.getAttribute('data-guests') || '2';
+          guestButtons.forEach(function (b) {
+            var selected = b === btn;
+            b.classList.toggle('is-selected', selected);
+            b.setAttribute('aria-checked', String(selected));
+          });
+          updatePreview();
+        });
+      });
+
+      // Preset triggers from Services and Night Café sections
+      document.querySelectorAll('[data-preset]').forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var presetService = trigger.getAttribute('data-preset');
+          var presetPref = trigger.getAttribute('data-pref');
+          selectService(presetService, presetPref);
+          var prenotaSec = document.getElementById('prenota');
+          if (prenotaSec) {
+            prenotaSec.scrollIntoView({ behavior: 'smooth' });
+          }
+          if (nameInput) {
+            setTimeout(function () { nameInput.focus(); }, 350);
+          }
+        });
+      });
+
+      [dateInput, prefSelect, nameInput, notesInput].forEach(function (el) {
+        if (!el) return;
+        el.addEventListener('input', function () {
+          el.classList.remove('has-error');
+          if (errorEl) errorEl.classList.remove('is-visible');
+          updatePreview();
+        });
+        el.addEventListener('change', updatePreview);
+      });
+
+      if (privacyCheck) {
+        privacyCheck.addEventListener('change', function () {
+          if (errorEl) errorEl.classList.remove('is-visible');
+        });
+      }
+
+      if (copyBtn) {
+        copyBtn.addEventListener('click', function () {
+          var msg = buildMessage();
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(msg).then(function () {
+              var orig = copyBtn.textContent;
+              copyBtn.textContent = 'Testo copiato';
+              setTimeout(function () { copyBtn.textContent = orig; }, 1800);
+            });
+          }
+        });
+      }
+
+      if (bookingForm) {
+        bookingForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var errors = [];
+
+          if (dateInput && !dateInput.value) {
+            errors.push('Seleziona una data per la prenotazione.');
+            dateInput.classList.add('has-error');
+          }
+          if (nameInput && nameInput.value.trim().length < 2) {
+            errors.push('Inserisci il tuo nome e cognome.');
+            nameInput.classList.add('has-error');
+          }
+          if (privacyCheck && !privacyCheck.checked) {
+            errors.push("Spunta la casella dell'Informativa Privacy GDPR per procedere.");
+          }
+
+          if (errors.length > 0) {
+            errorEl.textContent = errors.join(' ');
+            errorEl.classList.add('is-visible');
+            successEl.classList.remove('is-visible');
+            return;
+          }
+
+          errorEl.classList.remove('is-visible');
+          var msg = buildMessage();
+          var waUrl = buildWhatsappUrl(msg);
+          updatePreview();
+          successEl.classList.add('is-visible');
+
+          // Navigate safely using an anchor click to avoid popup-blocker issues
+          var tempLink = document.createElement('a');
+          tempLink.href = waUrl;
+          tempLink.target = '_blank';
+          tempLink.rel = 'noopener noreferrer';
+          document.body.appendChild(tempLink);
+          tempLink.click();
+          document.body.removeChild(tempLink);
+        });
+      }
+
+      updatePreview();
+
+      /* 6. GDPR Click-to-Load Google Map */
+      var loadMapBtn = document.getElementById('loadMapBtn');
+      var mapBox = document.getElementById('mapBox');
+      var mapPlaceholder = document.getElementById('mapPlaceholder');
+
+      if (loadMapBtn && mapBox && mapPlaceholder) {
+        loadMapBtn.addEventListener('click', function () {
+          var iframe = document.createElement('iframe');
+          iframe.className = 'map-iframe';
+          iframe.title = 'Mappa Bagni Carlo - Viale Adriatico, 84, Fano (PU)';
+          iframe.loading = 'lazy';
+          iframe.referrerPolicy = 'no-referrer-when-downgrade';
+          iframe.src = 'https://www.google.com/maps?q=43.8456,13.0218%20(Bagni%20Carlo%20-%20Viale%20Adriatico%2084%2C%20Fano)&z=16&output=embed';
+          mapBox.replaceChild(iframe, mapPlaceholder);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
